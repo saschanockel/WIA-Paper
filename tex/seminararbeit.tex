@@ -73,11 +73,13 @@ Neben dem Aufbau der Informationspakete werden auch Verantwortlichkeiten beschri
 
 % -------------------------------------------------------
 \section{Herausforderungen im Lebenszyklus von Archivdaten}
-
+Die Daten in digitalen Archiven sind im Gegensatz zu den Daten in normalen Speichersystemen von gänzlich anderen Problemen betroffen als nur dem Ausfall der Speichermedien auf denen sie sich befinden. So werden in herkömmlichen Speichersystemen wie etwa dem \ac{NAS} zuhause die Daten in der Regel häufiger abgerufen oder verändert, wodurch indirekt Mechanismen wie zum Beispiel die Fehlerkorrektur des \ac{RAID} greifen und so die Daten im Falle einer fehlerhaften Prüfsumme automatisch über die Paritätsinformationen des \ac{RAID} wiederhergestellt werden. Dies ist bei Archiven in der Regel nicht der Fall, da Daten hier meist auf lange Sicht, mitunter sogar Jahrzehnte, nicht abgerufen werden, auch eine Veränderung der Daten ist in einem Archiv normalerweise nicht gewünscht. Der Verfall der gespeicherten Informationen ist jedoch nur ein kleiner Teil der Risiken und Probleme für Archivdaten der durch regelmäßige Maßnahmen wie das sogenannte "data scrubbing", bei dem alle Speicherblöcke auf Fehler geprüft und auftretende Fehler korrigiert werden, weitestgehend eliminiert werden kann. Aufgrund der Langlebigkeit von Archivdaten spielen auch ganz andere Faktoren eine Rolle die bei Daten in gebräuchlichen Systemen die für einige Jahre ausgelegt sind nicht von Bedeutung sind. Folgende drei Kategorien sind hier von besonderem Interesse.
 
 % -----------------------------
 \subsection{Neue Hard- und Software}
+Kein Speichermedium ist unbegrenzt haltbar, das gilt besonders für Festplatten, die einen Großteil des Speichers zur Verfügung stellen der weltweit verwendet wird, deswegen wurden Technologien wie \ac{RAID} entwickelt um Datenverluste zu verhindern und einen reibungslosen Austausch von defekten oder ausgedienten Festplatten zu ermöglichen. Auch Neuerungen in der Technik können einen Austausch der Speichermedien durch beispielsweise langlebigere oder über mehr Kapazität verfügende Hardware bedeuten. Es sind aber nicht nur Defekte an der Hardware die einen Datenverlust bedingen können sondern auch die Software oder im Fall der Festplatten die Firmware die für die Verwaltung der physikalischen Speicherblöcke zuständig ist. Deshalb gilt es wie bei allen Softwaresystemen auch bei Archivsystemen die verwendete Software immer aktuell zu halten um eventuelle Fehler oder auch Sicherheitslücken zu beseitigen und einen sicheren Betrieb zu gewährleisten.
 
+Der Austausch von Hardware und die Aktualisierung von Software bedeutet für die Archivdaten Veränderung, da die Daten vom auszutauschenden Speichermedium auf das neue migriert oder eventuell durch neue Software anders organisiert werden müssen. Weil Archive jedoch den Anspruch haben ihren Bestand möglichst originalgetreu zu speichern und zu konservieren birgt jede Aktualisierung der Hard- oder Software das Risiko der kompromittierung, genau aus diesem Grund beinhaltet das \ac{OAIS} das Kozept der \ac{PDI} Blöcke die dazu gedacht sind die Integrität der Daten zu gewährleisten und Änderungen zu dokumentieren.
 
 % -----------------------------
 \subsection{Unbeständigkeit von Dateiformaten}
@@ -123,6 +125,8 @@ Neben dem Aufbau der Informationspakete werden auch Verantwortlichkeiten beschri
 \acro{OAIS}{Open Archival Information System}
 \acro{D-SDA}{Deutsches Satellitendatenarchiv}
 \acro{PDF}{Portable Document Format}
+\acro{NAS}{Network Attached Storage}
+\acro{RAID}{Redundant Array of Independent Disks}
 \acro{MB}{Megabyte}
 \acro{GB}{Gigabyte}
 \acro{TB}{Terabyte}
