@@ -83,7 +83,13 @@ Der Austausch von Hardware und die Aktualisierung von Software bedeutet für die
 
 % -----------------------------
 \subsection{Unbeständigkeit von Dateiformaten}
+Besonders Dateiformate stellen für die langfristige Speicherung von Daten ein Problem dar, das liegt vor allem daran, dass es nicht unbedingt garantiert werden kann, dass beispielsweise das archivierte Word 2003 Dokument auch in 100 Jahren noch geöffnet werden kann, da entweder keine Version von Word mehr verfügbar ist welche das Dokument öffnen kann oder die Software schlicht nicht mehr erhältlich ist weil die Entwicklung eingestellt wurde oder die Firma nicht mehr existiert.
 
+Open-Source Dateiformate wie JPEG2000 bieten dagegen den Vorteil, dass sie von einer Vielzahl von Entwicklern am Leben gehalten und weiterentwickelt werden, weshalb sie sich im Gegensatz zu proprietären Formaten generell eher für ein Archivsystem eignen. Es ist aber längst nicht für jede Form von Daten ein passendes Open-Source Format erhältlich, das gilt etwa für \ac{CAD} Dateitypen welche in der Regel von großen Konzernen entwickelt und gepflegt werden. So liegt die Verantwortung für die Pflege der Formate wieder bei den Konzernen womit wiederum eine gewisse Unsicherheit für die Zukunft des Formats einhergeht. 
+
+Deshalb ist es sinnvoll sich schon beim planen eines Archivs genaue Gedanken darüber zu machen welche Formate unterstützt werden sollen, da hierdurch die eventuell spätere Migration auf neuere Versionen der verwendeten Formate stark vereinfacht beziehungsweise erst ermöglicht wird \autocite{dpcFormatsStandards}.
+
+Die Entscheidung für eine kleine Anzahl an verwendeten Formaten bedeutet jedoch auch, dass die Daten die eingepflegt werden sollen erst konvertiert werden müssen, wie zum Beispiel ein Word Dokument zum bereits für viele Archive verwendeten Format \acs{PDF}/A welches eine Untermenge des viel komplexeren \acs{PDF} Standards bildet und für die längerfristige Verwendung entwickelt wurde \autocite{Strodl2007}.
 
 % -----------------------------
 \subsection{Verschlüsselung und Sicherheit}
@@ -119,9 +125,11 @@ Der Austausch von Hardware und die Aktualisierung von Software bedeutet für die
 % Sie müssen die Abkürzungen selbst alphabetisch sortieren!
 \begin{acronym}[IEEE]
 \acro{AIP}{Archival Information Package}
+\acro{CAD}{Computer Assisted Design}
 \acro{SIP}{Submission Information Package}
 \acro{DIP}{Dissemination Information Package}
 \acro{PDI}{Preservation Description Information}
+\acro{PDF}{Portable Document Format}
 \acro{OAIS}{Open Archival Information System}
 \acro{D-SDA}{Deutsches Satellitendatenarchiv}
 \acro{PDF}{Portable Document Format}
