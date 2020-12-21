@@ -1,4 +1,4 @@
-# Makefile for the TPE exam
+# Makefile
 
 TEMP_DIR = ../temp
 RESULT_DIR = ../result
@@ -12,7 +12,7 @@ cp literatur.bib $(TEMP_DIR)
 @echo "Building $(FILE)"
 @echo $(FILE)
 @$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE)
-@cd $(TEMP_DIR) ; $(BIBTEX) $(basename $(FILE)) 
+@cd $(TEMP_DIR) ; $(BIBTEX) $(basename $(FILE))
 # @cd $(TEMP_DIR) ; $(MAKEINDEX) $(basename $(FILE)).idx
 @$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
 @$(LATEX) -draftmode -output-directory=$(TEMP_DIR) $(FILE) > /dev/null
@@ -37,7 +37,7 @@ $(TEMP_DIR)/seminararbeit.pdf: seminararbeit.tex preambel.tex literatur.bib src/
 
 $(RESULT_DIR)/seminararbeit.pdf: $(TEMP_DIR)/seminararbeit.pdf
 	cat $< > $@
- 
+
 $(TEMP_DIR):
 	mkdir $(TEMP_DIR)
 
